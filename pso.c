@@ -1,6 +1,6 @@
 /* 
     author: S. Song 
-    email: leadingsong[dot]outlook.com
+    email: leadingsong[at]outlook.com
     license: Apache 2.0
 
 */
