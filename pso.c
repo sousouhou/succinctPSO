@@ -12,7 +12,7 @@
 #include <time.h>
 #include "rand.h"
 
-#define MAX_POPSIZE     400     
+#define MAX_POPSIZE     400  
 #define MAX_DIMEN       100  
 
 
@@ -42,15 +42,15 @@ double gbestFit= 1e+100;
 
 double fun_hook(double *a, int dime)
 {
-	double x = 0;
-	int i = 0;
-	
-	FEs ++;
-	if(FEs % 1000 == 0 && FEs!=0 )
-	{
-		printf("FEs = %d: %.6e\n", FEs, gbestFit);
-	}
-	
+    double x = 0;
+    int i = 0;
+    
+    FEs ++;
+    if(FEs % 1000 == 0 && FEs!=0 )
+    {
+        printf("FEs = %d: %.6e\n", FEs, gbestFit);
+    }
+    
     for (i=0; i<dime; i++)
     {
         x += a[i]*a[i];
@@ -61,17 +61,17 @@ double fun_hook(double *a, int dime)
 
 void initial( void )
 {
-	randomize((time(NULL)%1000)/1000.0);
-	
-	FEs = 0;
-	maxFEs = 25000;
+    randomize((time(NULL)%1000)/1000.0);
+    
+    FEs = 0;
+    maxFEs = 25000;
 
-	dim = 20;
-	popSize =100;
-	w = 0.9;
-	c1 = 1.5;
-	c2 = 0.5;
-	
+    dim = 20;
+    popSize =100;
+    w = 0.9;
+    c1 = 1.5;
+    c2 = 0.5;
+    
     posMin = -10;
     posMax = 10;
 
@@ -95,7 +95,7 @@ void initial( void )
             
         }        
     }
-	
+    
     {
         int j =0;
         for(j=0; j<dim; j++)
@@ -104,13 +104,13 @@ void initial( void )
         } 
         gbestFit = pbestFit[0];
     }
-	
+    
 }
 
 
 
 int main(void)
-{	
+{    
     initial();
 
     while(FEs < maxFEs ) 
@@ -173,8 +173,8 @@ int main(void)
         } 
     }
 
-    printf("Last, gbestFit is %.6e \n", gbestFit);			
+    printf("Last, gbestFit is %.6e \n", gbestFit);            
 
-	return 0;
+    return 0;
 }
 
