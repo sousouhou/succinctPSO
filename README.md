@@ -6,7 +6,7 @@ A succinct particle swarm optimizer (PSO) in C
 Current version is 1.0. 
 
 # Author 
-S. Song <leadingsong@outlook.com>
+S. Song
 
 # License
 This software is released under Apache 2.0 License.
